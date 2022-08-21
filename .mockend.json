@@ -1,6 +1,15 @@
 {
   "Employees": {
     "name": { "string": {} },
-    "id": {"int": {"min": 1, "max": 200}}
+    "id": {"int": {}},
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
   }
 }
